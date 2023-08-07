@@ -1,0 +1,24 @@
+
+<h1>Stupid Coaching</h1>
+
+<div class="m-3 mb-2 w-50 card-body bg-warning text-dark" >
+  <div class="">
+    <p><%= params[:ask] %><p>
+    <p>-YOU</p>
+  </div>
+</div>
+
+<div class="m-3 mb-2 w-50 card-body bg-success">
+  <% if params[:ask].include?('?')%>
+    <%= 'Silly question, get dressed and go to work!' %>
+  <% elsif params[:ask] == 'I am going to work'%>
+    <%= 'Great!' %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work" %>
+  <% end %>
+  <p>-YOUR COACH</p>
+</div>
+
+<div class="card-body">
+<%= link_to "Ask a new question", ask_path%>
+</div>
